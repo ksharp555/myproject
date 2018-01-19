@@ -1,7 +1,7 @@
 package com.ray.opinionpoll.config;
 
-import com.ray.opinionpoll.document.Users;
-import com.ray.opinionpoll.repository.UserRepository;
+import com.ray.opinionpoll.entities.Users;
+import com.ray.opinionpoll.repositories.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

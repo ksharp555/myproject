@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RestaurantService} from './restaurant.service';
-import {Restaurant} from './restaurant';
+import {Restaurant} from '../../shared/restaurant';
 import {OnClickEvent, OnRatingChangeEven, OnHoverRatingChangeEvent} from 'angular-star-rating/star-rating-struct';
 
 @Component({
@@ -11,7 +11,7 @@ import {OnClickEvent, OnRatingChangeEven, OnHoverRatingChangeEvent} from 'angula
 })
 export class RestaurantEntryComponent implements OnInit {
 
-  restaurants: Restaurant[];
+  restaurants: Restaurant[] = [];
   onClickResult: OnClickEvent;
   onHoverRatingChangeResult: OnHoverRatingChangeEvent;
   onRatingChangeResult: OnRatingChangeEven;
@@ -19,7 +19,8 @@ export class RestaurantEntryComponent implements OnInit {
   constructor(private restaurantService: RestaurantService ) { }
 
   ngOnInit() {
-    this.restaurants = this.restaurantService.getRestaurants();
+    this.restaurantService.getRestaurants()
+      .then(restaurants => this.restaurants = restaurants);
   }
 
 

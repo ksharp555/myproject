@@ -1,4 +1,4 @@
-package com.ray.opinionpoll.document;
+package com.ray.opinionpoll.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 /**
  * Created by i857019 on 8/9/17.
  */
-@Document
+@Document(collection="users")
 public class Users
 {
     @Id

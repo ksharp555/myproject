@@ -1,6 +1,6 @@
-package com.ray.opinionpoll.repository;
+package com.ray.opinionpoll.repositories;
 
-import com.ray.opinionpoll.document.Users;
+import com.ray.opinionpoll.entities.Users;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
