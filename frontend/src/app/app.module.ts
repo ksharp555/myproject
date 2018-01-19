@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { RestaurantEntryComponent } from './restaurant-entry/restaurant-entry.component';
 
 import { StarRatingModule } from 'angular-star-rating';
+import {HttpModule} from '@angular/http';
+import {RestaurantService} from './restaurant-entry/restaurant.service';
 
 @NgModule({
   declarations: [
@@ -15,9 +17,10 @@ import { StarRatingModule } from 'angular-star-rating';
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpModule,
     StarRatingModule.forRoot()
   ],
-  providers: [],
+  providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

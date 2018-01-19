@@ -1,7 +1,7 @@
 package com.ray.opinionpoll.resource;
 
-import com.ray.opinionpoll.document.Users;
-import com.ray.opinionpoll.repository.UserRepository;
+import com.ray.opinionpoll.entities.Users;
+import com.ray.opinionpoll.repositories.UserRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
